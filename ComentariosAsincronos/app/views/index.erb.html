@@ -1,0 +1,48 @@
+<header>
+  <img src="codea-logo.png">
+</header>
+
+<article>
+    <h2 class="main-title">Desarrollando aplicaciones en Ruby on Rails</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</article>
+
+<div id="comment_area">
+  <h4>Comentarios</h4>
+
+  <ul id="comment_list">
+    
+    <% comments = Comment.all %>
+    <% comments.each do |comment| %>
+    <li>
+      <%= comment.comment %>
+      <span class="author"><%= comment.author %></span>
+    </li>
+    <%end%>
+  </ul>
+
+  <form id="form_coment">
+        <textarea id="comment_text" name="comentarios" rows="4" cols="95" placeholder="Comentario"></textarea><br>
+        <input id="author_text" type="text" size="80" name = "Autor" placeholder="Autor">
+        <input type="submit" value="Comentar!">
+  </form>
+
+  <button id="new_comment_button">Nuevo Comentario</button>
+</div>
